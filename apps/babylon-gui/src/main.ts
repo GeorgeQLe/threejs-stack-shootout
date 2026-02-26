@@ -104,7 +104,7 @@ for (let i = 0; i < uiWidgets; i++) {
   tb.color = "#00ff00";
   tb.fontSize = 10;
   tb.fontFamily = "monospace";
-  // Position using center-based percentage offsets (-1 to 1 range, mapped to screen)
+  // Position using percentage offsets from center (-50% to +50% maps to screen edges)
   tb.left = `${((col + 0.5) / cols - 0.5) * 100}%`;
   tb.top = `${((row + 0.5) / rows - 0.5) * 100}%`;
   guiTexture.addControl(tb);
@@ -113,8 +113,6 @@ for (let i = 0; i < uiWidgets; i++) {
 
 // --- Scene instrumentation for draw call counting ---
 const instrumentation = new SceneInstrumentation(scene);
-instrumentation.captureRenderTime = false;
-instrumentation.captureFrameTime = false;
 
 // --- Camera orbit ---
 const orbitPath = createOrbitCameraPath({
@@ -165,6 +163,9 @@ overlay.onStart(() => {
     },
     rendererInfoProvider: () => ({
       drawCalls: instrumentation.drawCallsCounter.current,
+      // Note: Babylon's getTotalVertices() counts all scene vertices (static), not per-frame
+      // rendered triangles like Three.js's renderer.info.render.triangles. The values are
+      // directionally comparable for identical geometry but not an exact semantic match.
       triangles: scene.getTotalVertices() / 3,
       geometries: scene.geometries?.length ?? 0,
       textures: scene.textures?.length ?? 0,

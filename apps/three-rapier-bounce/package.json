@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5176",
+    "dev": "vite --port 5180",
     "build": "vite build",
-    "preview": "vite preview --port 4176"
+    "preview": "vite preview --port 4180"
   },
   "dependencies": {
     "@bench/shared": "workspace:*"

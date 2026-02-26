@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-02-25
+### Fixed
+- **babylon-gui:** Removed misleading `captureRenderTime = false` / `captureFrameTime = false` on `SceneInstrumentation` — these disable features already off by default and obscured the draw-call counting behavior.
+- **babylon-gui:** Corrected GUI positioning comment from "-1 to 1 range" to "-50% to +50% maps to screen edges".
+- **babylon-gui:** Added clarifying comment on `getTotalVertices() / 3` noting it is a static vertex count, not per-frame rendered triangles like Three.js's `renderer.info.render.triangles`.
+- **three-rapier-bounce:** Changed dev port `5176` → `5180` and preview port `4176` → `4180` to resolve collision with `babylon-gui` which owns port 5176.
+
 ## 2026-02-26
 ### Added
 - Initial planning documentation set:
