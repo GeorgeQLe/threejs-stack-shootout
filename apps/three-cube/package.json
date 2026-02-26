@@ -1,0 +1,19 @@
+{
+  "name": "app-three-cube",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@bench/shared": "workspace:*",
+    "three": "^0.183.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.183.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.8"
+  }
+}

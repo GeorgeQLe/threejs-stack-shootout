@@ -1,0 +1,17 @@
+{
+  "name": "app-three-solar-system",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5179",
+    "build": "vite build",
+    "preview": "vite preview --port 4179"
+  },
+  "dependencies": {
+    "@bench/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8",
+    "typescript": "^5.6.3"
+  }
+}

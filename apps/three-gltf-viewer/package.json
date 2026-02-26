@@ -1,0 +1,17 @@
+{
+  "name": "app-three-gltf-viewer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5178",
+    "build": "vite build",
+    "preview": "vite preview --port 4178"
+  },
+  "dependencies": {
+    "@bench/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8",
+    "typescript": "^5.6.3"
+  }
+}
