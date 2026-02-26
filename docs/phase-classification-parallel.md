@@ -5,9 +5,9 @@ Date captured: 2026-02-26
 ## Phase Types
 1. Phase 01 (`phase-01-monorepo-scaffold.md`): Full-stack
 2. Phase 02 (`phase-02-shared-benchmark-core.md`): Full-stack
-3. Phase 03 (`phase-03-apps-cube-html-pixi.md`): Frontend
-4. Phase 04 (`phase-04-apps-physics-ecs.md`): Frontend
-5. Phase 05 (`phase-05-apps-gltf-solar.md`): Frontend
+3. Phase 03 (`phase-03-three-html.md`): Frontend
+4. Phase 04 (`phase-04-three-pixi.md`): Frontend
+5. Phase 05 (`phase-05-babylon-gui.md`): Frontend
 6. Phase 06 (`phase-06-validation-results-docs.md`): Full-stack
 7. Phase 07 (`phase-07-repo-transition-gap-plan.md`): Full-stack
 
